@@ -1,23 +1,26 @@
-years = 1
+years = 2
 months = 12
 total_months = years * months
-complete_years = False
-start_month = 11
-investment = 50000
-interest_rate_percent = 14
+complete_years = True
+start_month = 10
+investment = 2000000
+interest_rate_percent = 15
 interest_rate = interest_rate_percent / 100
 monthly_interest_rate = interest_rate / 12
 total_interest = 0
-withdrawal = 400
+withdrawal = 0
 total_withdrawal = 0
 
 
 balance = investment
 break_down = "Y"
-break_down_string = "Year" if break_down == "Y" else "Month"
+break_down_string = "Month"
 
-if complete_years is True:
-    start_month = 1
+if break_down == "Y":
+    break_down_string = "Year"
+
+# if complete_years is True:
+#     start_month = 1
     
 
 print(f"{break_down_string} \t Interest \t\t Total Interest \t Balance \t Withdrawal")
